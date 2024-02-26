@@ -1,4 +1,4 @@
-type ProfileProps = {
+export type ProfileProps = {
   name: string;
   email: string;
   isActive: boolean;

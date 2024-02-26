@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import PropsDemo from "./exercises/PropsDemo";
+import ListDemo from "./exercises/ListDemo";
+import ListDemo2 from "./exercises/ListDemo2";
+import ImageButton from "./components/ImageButton";
 
 
 
@@ -26,6 +29,9 @@ export default function App() {
           <div className="exercise-style">
             {selectedView == "info" ? <p>All exercises for React day-1</p> : null}
             {selectedView == "props1" ? <PropsDemo title="Props Demo"></PropsDemo> : null}
+            {selectedView == "list1" ? <ListDemo title="List Demo"></ListDemo> : null}
+            {selectedView == "list2" ? <ListDemo2 title="List Demo 2"></ListDemo2> : null}
+            {selectedView == "image1" ? <ImageButton title="Event Demo"></ImageButton> : null}
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
         </div>
@@ -46,6 +52,15 @@ const Buttons = (props: ButtonProps) => {
       </button>
       <button className="btn-w100" onClick={() => handleSelected("props1")}>
         Props Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("list1")}>
+        List Demo
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("list2")}>
+        List Demo 2
+      </button>
+      <button className="btn-w100" onClick={() => handleSelected("image1")}>
+        Event Demo
       </button>
       {/* Add a new button for each of the exercises you complete */}
     </>
